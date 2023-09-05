@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'qa.guru'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+compileTestJava{
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
+    testImplementation("com.codeborne:selenide:6.16.1")
+}
+
+test {
+    useJUnitPlatform()
+}
